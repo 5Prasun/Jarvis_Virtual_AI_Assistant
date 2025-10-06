@@ -26,18 +26,11 @@ try {
   setLoading(false)
   navigate("/customize")
 } catch (error) {
-  console.log(error);
-  setUserData(null);
-  setLoading(false);
-
-  // Safely extract error message
-  if (error.response && error.response.data && error.response.data.message) {
-    setErr(error.response.data.message);
-  } else {
-    setErr("Something went wrong. Please try again.");
-  }
+  console.log(error)
+  setUserData(null)
+  setLoading(false)
+  setErr(error.response.data.message)
 }
-
     }
   return (
     <div className='w-full h-[100vh] bg-cover flex justify-center items-center' style={{backgroundImage:`url(${bg})`}} >

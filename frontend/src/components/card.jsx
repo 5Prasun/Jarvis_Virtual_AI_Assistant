@@ -15,3 +15,4 @@ function Card({image}) {
 }
 
 export default Card
+
