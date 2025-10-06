@@ -11,7 +11,7 @@ import geminiResponse from "./gemini.js"
 
 const app=express()
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://virtual-ai-assistant-2l0d.onrender.com",
     credentials:true
 }))
 const port=process.env.PORT || 5000
@@ -24,4 +24,5 @@ app.use("/api/user",userRouter)
 app.listen(port,()=>{
     connectDb()
     console.log("server started")
+
 })
