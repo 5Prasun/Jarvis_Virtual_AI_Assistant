@@ -97,7 +97,7 @@ npm install
 npm run dev
 
 
-✅ Open the app at the local URL displayed in the terminal https://virtual-ai-assistant-2l0d.onrender.com
+✅ Open the app at the local URL displayed in the terminal https://animated-eclair-2d46b6.netlify.app/
 
 🌍 Deployment
 
