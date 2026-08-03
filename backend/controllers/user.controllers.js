@@ -1,5 +1,7 @@
  import uploadOnCloudinary from "../config/cloudinary.js"
- import { openaiResponse } from "../config/openai.js";
+ import { ollamaResponse } from "../config/ollama.js";
+//import { claudeResponse } from "../config/claude.js";
+//import { openaiResponse } from "../config/openai.js";
 //import geminiResponse from "../gemini.js"
 import User from "../models/user.model.js"
 import moment from "moment"
@@ -59,11 +61,12 @@ export const askToAssistant = async (req, res) => {
     const assistantName = user.assistantName;
 
     //const result = await geminiResponse(command, assistantName, userName);
-    
+    //const result = await openaiResponse(command, assistantName, userName);
+    //const result = await claudeResponse(command, assistantName, userName);
 
-    const result = await openaiResponse(command, assistantName, userName);
+    const result = await ollamaResponse(command, assistantName, userName);
 
-    console.log("Gemini raw result:", result);
+    console.log("Ollama raw result:", result);
 
     if (!result) {
       return res.status(500).json({ response: "AI returned empty result" });
